@@ -1,0 +1,17 @@
+registry:
+  restart: always
+  image: registry:2
+  ports:
+    - 5000:5000
+
+  volumes:
+    - /path/data:/var/lib/registry
+    # - /path/certs:/certs
+    # - /path/auth:/auth
+
+
+# refs
+# https://docs.docker.com/registry/recipes/nginx/#setting-things-up
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-18-04
+# https://docs.docker.com/registry/deploying/#considerations-for-air-gapped-registries
+# https://docs.docker.com/registry/deploying/
